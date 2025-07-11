@@ -1,0 +1,88 @@
+/* Reset & Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #333;
+}
+
+/* Navbar Styling */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px 0;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: #007acc;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #007acc;
+  background-color: rgba(0, 122, 204, 0.1);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Section Styling */
+section {
+  min-height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 600;
+  transition: background 0.4s ease-in-out;
+}
+
+#home {
+  background-color: #fff;
+}
+
+#about {
+  background-color: #fce4ec;
+}
+
+#services {
+  background-color: #e3f2fd;
+}
+
+#contact {
+  background-color: #e8f5e9;
+}
